@@ -7,6 +7,7 @@ gitbook_build:
 	gitbook build
 
 pdf:
+	git pull origin master --rebase
 	gitbook pdf ./ ./dble-manual.pdf
 	git add .
 	git commit -a -m "Update pdf" 
