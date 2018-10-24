@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>2.1.7 reload命令 · dble manual</title>
+        <title>2.1.17 check @@metadata命令 · dble manual</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -53,10 +53,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="2.1.08_rollback.html" />
+    <link rel="next" href="../2.02_global_sequence.html" />
     
     
-    <link rel="prev" href="2.1.06_stop.html" />
+    <link rel="prev" href="2.1.16_create_database.html" />
     
 
     </head>
@@ -488,7 +488,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.4.1.7" data-path="2.1.07_reload.html">
+        <li class="chapter " data-level="1.4.1.7" data-path="2.1.07_reload.html">
             
                 <a href="2.1.07_reload.html">
             
@@ -618,7 +618,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.4.1.17" data-path="2.1.17_check_meta_data.html">
+        <li class="chapter active" data-level="1.4.1.17" data-path="2.1.17_check_meta_data.html">
             
                 <a href="2.1.17_check_meta_data.html">
             
@@ -2009,7 +2009,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >2.1.7 reload命令</a>
+        <a href="../.." >2.1.17 check @@metadata命令</a>
     </h1>
 </div>
 
@@ -2024,27 +2024,54 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h3 id="217--reload-&#x547D;&#x4EE4;">2.1.7  reload &#x547D;&#x4EE4;</h3>
-<h4 id="2171--reload-config">2.1.7.1  reload @@config</h4>
-<h5 id="reload-config">reload @@config;</h5>
-<p>&#x63CF;&#x8FF0;&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6570;&#x636E;&#x6E90;&#x914D;&#x7F6E;&#x5E76;&#x81EA;&#x68C0;&#xFF0C;&#x6D89;&#x53CA;rule.xml&#xFF0C;schema.xml&#xFF0C;server.xml &#x5185;&#x5BB9;, &#x4F46;&#x4E0D;&#x5305;&#x542B;dataHosts &#x548C;dataNodes&#xFF0C;&#x81EA;&#x68C0;&#x5931;&#x8D25;&#x5C06;&#x8FD4;&#x56DE;ERROR&#x3002;<br>&#x7ED3;&#x679C;&#xFF1A;OK &#x6216;&#x8005;ERROR  </p>
-<h4 id="2172--reload-configall">2.1.7.2  reload @@config_all</h4>
-<h5 id="reload-configall--s--f--r">reload @@config_all [-s] [-f] [-r];</h5>
-<p>&#x63CF;&#x8FF0;&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x6240;&#x6709;&#x914D;&#x7F6E;&#xFF0C;&#x6D89;&#x53CA;rule.xml&#xFF0C;schema.xml&#xFF0C;server.xml &#x5185;&#x5BB9;&#xFF0C;&#x4F1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x914D;&#x7F6E;dataHosts &#x548C;dataNodes&#x3002;<br>-s &#x8DF3;&#x8FC7;&#x6D4B;&#x8BD5;&#x540E;&#x7AEF;&#x94FE;&#x63A5;&#xFF0C;&#x9ED8;&#x8BA4;&#x4E0D;&#x52A0;&#x6B64;&#x53C2;&#x6570;&#x4F1A;&#x5BF9;&#x914D;&#x7F6E;&#x4E2D;&#x7684;&#x540E;&#x7AEF;&#x94FE;&#x63A5;&#x8FDB;&#x884C;&#x6D4B;&#x8BD5;&#xFF0C;&#x6D4B;&#x8BD5;&#x5931;&#x8D25;&#x5C06;&#x8FD4;&#x56DE;ERROR&#xFF1B;<br>-f &#x5173;&#x95ED;&#x6240;&#x6709;&#x5904;&#x4E8E;&#x4E8B;&#x52A1;&#x4E2D;&#x7684;&#x524D;&#x7AEF;&#x94FE;&#x63A5;,&#x5982;&#x679C;&#x65E0;&#x6B64;&#x53C2;&#x6570;&#x9ED8;&#x8BA4;&#x4EC5;&#x5C06;&#x76F8;&#x5E94;&#x540E;&#x7AEF;&#x94FE;&#x63A5;&#x653E;&#x5165;&#x65E7;&#x94FE;&#x63A5;&#x6C60;&#x3002;<br>-r &#x4E0D;&#x505A;&#x667A;&#x80FD;&#x5224;&#x65AD;,&#x5C06;&#x6240;&#x6709;&#x540E;&#x7AEF;&#x8FDE;&#x63A5;&#x6C60;&#x5168;&#x90E8;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x4E00;&#x904D;&#x3002;&#x4E0D;&#x52A0;&#x6B64;&#x53C2;&#x6570;&#x65F6;&#xFF0C;&#x5C06;&#x5BF9;&#x65B0;&#x914D;&#x7F6E;&#x8FDB;&#x884C;&#x667A;&#x80FD;&#x5224;&#x65AD;&#xFF0C;&#x53EA;&#x4F1A;&#x5BF9;&#x589E;&#x5220;&#x6539;&#x7684;&#x8FDE;&#x63A5;&#x6C60;&#x505A;&#x53D8;&#x66F4;&#xFF0C;&#x4E0D;&#x5F71;&#x54CD;&#x672A;&#x4F5C;&#x53D8;&#x66F4;&#x7684;&#x8FDE;&#x63A5;&#x6C60;<br>&#x66F4;&#x591A;&#x7EC6;&#x8282; &#x53C2;&#x8003;<a href="../2.19_reload_diff.html"> 2.19 &#x667A;&#x80FD;&#x8BA1;&#x7B97;reload_all</a><br>&#x7ED3;&#x679C;&#xFF1A;OK &#x6216;&#x8005;ERROR  </p>
-<h4 id="2173--reload-metadata">2.1.7.3  reload @@metadata</h4>
-<h5 id="reload-metadata&#xFF1B;">reload @@metadata&#xFF1B;</h5>
-<p>&#x63CF;&#x8FF0;&#xFF1A;&#x91CD;&#x65B0;&#x52A0;&#x8F7D;&#x5143;&#x6570;&#x636E;&#x4FE1;&#x606F;&#x3002;<br>&#x7ED3;&#x679C;&#xFF1A;&#x8FD4;&#x56DE;OK&#x3002;  </p>
-<h4 id="2174--reload-sqlslown">2.1.7.4  reload @@sqlslow=N;</h4>
-<h5 id="reload-sqlslown">reload @@sqlslow=N;</h5>
-<p>&#x63CF;&#x8FF0;&#xFF1A;&#x8BBE;&#x5B9A;&#x7528;&#x6237;&#x5206;&#x6790;&#x7EDF;&#x8BA1;&#x7684;slow sql&#x65F6;&#x95F4;&#x9608;&#x503C;&#x5230;N&#x6BEB;&#x79D2;&#xFF1B; &#x5982;&#x679C;&#x8BED;&#x53E5;&#x4E2D;&#x6CA1;&#x6709;=&#x6216;&#x8005;reload @@sqlslow&#x4E4B;&#x540E;&#x6709;&#x522B;&#x7684;&#x4E0D;&#x542B;&#x7B49;&#x53F7;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#xFF0C;&#x5219;&#x4F1A;&#x8BBE;&#x7F6E;&#x4E3A;0.<br>&#x7ED3;&#x679C;&#xFF1A;OK  </p>
-<h4 id="2175--reload-userstat">2.1.7.5  reload @@user_stat</h4>
-<h5 id="reload-userstat">reload @@user_stat;</h5>
-<p>&#x63CF;&#x8FF0;&#xFF1A;&#x91CD;&#x7F6E;&#x7528;&#x6237;&#x72B6;&#x6001;&#x7EDF;&#x8BA1;&#x7ED3;&#x679C;&#x3002;<br>&#x5F71;&#x54CD;&#x7684;&#x547D;&#x4EE4;:<br>show @@sql;<br>show @@sql.sum;<br>show @@sql.slow;<br>show @@sql.high;<br>show @@sql.large;<br>show @@sql.resultset;</p>
-<p>&#x7ED3;&#x679C;&#xFF1A;OK </p>
-<h4 id="2176--reload-querycf">2.1.7.6  reload @@query_cf</h4>
-<h5 id="reload-querycftablecolumn">reload @@query_cf[=table&amp;column];</h5>
-<p>&#x5176;&#x4E2D;&#xFF0C;table&#x4E3A;&#x8981;&#x7EDF;&#x8BA1;&#x7684;&#x76EE;&#x6807;&#x8868;&#x7684;&#x8868;&#x540D;&#xFF0C;column&#x4E3A;&#x76EE;&#x6807;&#x8868;&#x4E2D;&#x76EE;&#x6807;&#x5217;&#x7684;&#x5217;&#x540D;&#x3002;<br>&#x63CF;&#x8FF0;&#xFF1A;&#x91CD;&#x8BBE;show @@sql.conditiont&#x8981;&#x7EDF;&#x8BA1;&#x7684;&#x6761;&#x4EF6;&#x3002;<br>&#x7ED3;&#x679C;&#xFF1A;OK</p>
-<p>&#x5982;&#x679C;&#x8981;&#x6E05;&#x9664;&#x67E5;&#x8BE2;&#x6761;&#x4EF6;&#x7EDF;&#x8BA1;&#x8868;&#x5217;&#x7684;&#x8BBE;&#x7F6E;&#x6267;&#x884C;&#x547D;&#x4EE4;&#xFF1A;<br>reload @@query_cf&#xFF1B;<br>&#x6216;&#x8005;<br>reload @@query_cf=NULL;  </p>
+                                <h3 id="2117--check-metadata-&#x547D;&#x4EE4;">2.1.17  check @@metadata &#x547D;&#x4EE4;</h3>
+<p>&#x7528;&#x4E8E;&#x68C0;&#x67E5;meta&#x4FE1;&#x606F;&#x662F;&#x5426;&#x5B58;&#x5728;&#x4EE5;&#x53CA;&#x52A0;&#x8F7D;&#x7684;&#x65F6;&#x95F4;&#x3002;<br>&#x547D;&#x4EE4;&#x683C;&#x5F0F;&#xFF1A;  </p>
+<ul>
+<li>&#x7B2C;&#x4E00;&#x79CD;&#x5F62;&#x5F0F; <code>check @@metadata</code><ul>
+<li>&#x8FD4;&#x56DE;&#x4E0A;&#x4E00;&#x6B21; reload @@metadata &#x7684;datatime&#xFF08;&#x6216;&#x8005;&#x4E0A;&#x4E00;&#x6B21; reload @@config_all&#x7684;datatime &#x6216;&#x8005;&#x542F;&#x52A8;&#x65F6;&#x52A0;&#x8F7D;meta&#x7684;datatime&#xFF09;  </li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>&#x7B2C;&#x4E8C;&#x79CD;&#x5F62;&#x5F0F;<code>check full @@metadata</code> ,&#x5E76;&#x4E14;&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x8FC7;&#x6EE4;&#x6761;&#x4EF6;: </p>
+<ul>
+<li><code>where schema=? and table=?</code></li>
+<li><code>where schema=?</code></li>
+<li><code>where reload_time=&#x2018;yyyy-MM-dd HH:mm:ss&#x2019;</code>,<code>where reload_time&gt;=&#x2018;yyyy-MM-dd HH:mm:ss&#x2019;</code>,<code>where reload_time&lt;=&#x2018;yyyy-MM-dd HH:mm:ss&#x2019;</code></li>
+<li><code>where reload_time is null</code></li>
+<li><code>where consistent_in_data_nodes=0</code></li>
+<li><code>where consistent_in_data_nodes = 1</code></li>
+<li><code>where consistent_in_memory=0</code></li>
+<li><code>where consistent_in_memory = 1</code></li>
+<li>If no where, retrun all results.</li>
+</ul>
+</li>
+<li><p><code>check full @@metadata</code> &#x7ED3;&#x679C;&#x96C6;&#x5982;&#x4E0B;:</p>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>schema</th>
+<th>table</th>
+<th>reload_time</th>
+<th>table_structure</th>
+<th>consistent_in_data_nodes</th>
+<th>consistent_in_memory</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>schema</td>
+<td>table</td>
+<td>2018-09-18 11:01:04</td>
+<td>CREATE TABLE table`(.....</td>
+<td>1</td>
+<td>1</td>
+</tr>
+</tbody>
+</table>
+<p>column <strong>table_structure</strong> &#x548C; <code>show create table</code>&#x547D;&#x4EE4;&#x7ED3;&#x679C;&#x7684;&#x5F62;&#x5F0F;&#x4E00;&#x6837;<br>column <strong>consistent_in_data_nodes</strong> &#x8868;&#x793A;&#x4E0D;&#x540C;&#x5206;&#x7247;&#x4E4B;&#x95F4;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;0&#x4E3A;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;1&#x4E3A;&#x4E00;&#x81F4;<br>column <strong>consistent_in_memory</strong> &#x8868;&#x793A;&#x5185;&#x5B58;&#x4E2D;meta&#x4E0E;&#x5B9E;&#x9645;&#x540E;&#x7AEF;&#x7ED3;&#x70B9;&#x7684;&#x4E00;&#x81F4;&#x6027;&#xFF0C;0&#x4E3A;&#x4E0D;&#x4E00;&#x81F4;&#xFF0C;1&#x4E3A;&#x4E00;&#x81F4;  </p>
 
                                 
                                 </section>
@@ -2072,12 +2099,12 @@
 
             
                 
-                <a href="2.1.06_stop.html" class="navigation navigation-prev " aria-label="Previous page: 2.1.6 stop命令">
+                <a href="2.1.16_create_database.html" class="navigation navigation-prev " aria-label="Previous page: 2.1.16 create database命令">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="2.1.08_rollback.html" class="navigation navigation-next " aria-label="Next page: 2.1.8 rollback命令">
+                <a href="../2.02_global_sequence.html" class="navigation navigation-next " aria-label="Next page: 2.2 全局序列">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -2088,7 +2115,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.1.7 reload命令","level":"1.4.1.7","depth":3,"next":{"title":"2.1.8 rollback命令","level":"1.4.1.8","depth":3,"path":"2.Function/2.1_manager_cmd/2.1.08_rollback.md","ref":"2.Function/2.1_manager_cmd/2.1.08_rollback.md","articles":[]},"previous":{"title":"2.1.6 stop命令","level":"1.4.1.6","depth":3,"path":"2.Function/2.1_manager_cmd/2.1.06_stop.md","ref":"2.Function/2.1_manager_cmd/2.1.06_stop.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"2.Function/2.1_manager_cmd/2.1.07_reload.md","mtime":"2018-09-14T07:56:16.535Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-24T05:53:51.928Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.1.17 check @@metadata命令","level":"1.4.1.17","depth":3,"next":{"title":"2.2 全局序列","level":"1.4.2","depth":2,"path":"2.Function/2.02_global_sequence.md","ref":"2.Function/2.02_global_sequence.md","articles":[{"title":"2.2.1 MySQL offset-step方式","level":"1.4.2.1","depth":3,"path":"2.Function/2.2_global_sequence/2.2.1_MySQL-offset-setp.md","ref":"2.Function/2.2_global_sequence/2.2.1_MySQL-offset-setp.md","articles":[]},{"title":"2.2.2 时间戳方式","level":"1.4.2.2","depth":3,"path":"2.Function/2.2_global_sequence/2.2.2_timestamp.md","ref":"2.Function/2.2_global_sequence/2.2.2_timestamp.md","articles":[]},{"title":"2.2.3 分布式时间戳方式","level":"1.4.2.3","depth":3,"path":"2.Function/2.2_global_sequence/2.2.3_distribute_timestamp.md","ref":"2.Function/2.2_global_sequence/2.2.3_distribute_timestamp.md","articles":[]},{"title":"2.2.4 分布式offset-step方式","level":"1.4.2.4","depth":3,"path":"2.Function/2.2_global_sequence/2.2.4_distribute_offset-step.md","ref":"2.Function/2.2_global_sequence/2.2.4_distribute_offset-step.md","articles":[]}]},"previous":{"title":"2.1.16 create database命令","level":"1.4.1.16","depth":3,"path":"2.Function/2.1_manager_cmd/2.1.16_create_database.md","ref":"2.Function/2.1_manager_cmd/2.1.16_create_database.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"2.Function/2.1_manager_cmd/2.1.17_check_meta_data.md","mtime":"2018-10-24T05:48:37.911Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-24T05:53:51.928Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
