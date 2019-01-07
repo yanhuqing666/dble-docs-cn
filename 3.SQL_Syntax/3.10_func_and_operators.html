@@ -1818,7 +1818,20 @@
                 <a href="../6.Differernce_from_MySQL_Server/6.4_remove_message.html">
             
                     
-                    6.4 去除了增删改的message 信息
+                    6.4 去除了增删改的message信息
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.8.5" data-path="../6.Differernce_from_MySQL_Server/6.5_about_information_schema.html">
+            
+                <a href="../6.Differernce_from_MySQL_Server/6.5_about_information_schema.html">
+            
+                    
+                    6.5 information_schema等库的支持
             
                 </a>
             
@@ -3354,7 +3367,8 @@
 </tr>
 </tbody>
 </table>
-<p>&#x5907;&#x6CE8;: STD &#x548C;VARIANCE&#x76F8;&#x5173;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x7684;&#x5C40;&#x9650;&#x6027;&#xFF0C;&#x7CBE;&#x5EA6;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x89C1; <a href="https://github.com/actiontech/dble/issues/100" target="_blank"><code>STD()</code>/<code>STDDEV()</code>/<code>STDDEV_POP()</code>/<code>STDDEV_SAMP()</code>/<code>VAR_POP()</code>/<code>VAR_SAMP()</code>/<code>VARIANCE()</code> result precision is not correct</a></p>
+<p>&#x5907;&#x6CE8;: 
+STD &#x548C;VARIANCE&#x76F8;&#x5173;&#x51FD;&#x6570;&#xFF0C;&#x56E0;&#x4E3A;&#x5206;&#x5E03;&#x5F0F;&#x8BA1;&#x7B97;&#x7684;&#x5C40;&#x9650;&#x6027;&#xFF0C;&#x7CBE;&#x5EA6;&#x4F1A;&#x6709;&#x4E00;&#x4E9B;&#x95EE;&#x9898;&#xFF0C;&#x89C1; <a href="https://github.com/actiontech/dble/issues/100" target="_blank"><code>STD()</code>/<code>STDDEV()</code>/<code>STDDEV_POP()</code>/<code>STDDEV_SAMP()</code>/<code>VAR_POP()</code>/<code>VAR_SAMP()</code>/<code>VARIANCE()</code> result precision is not correct</a><br>&#x5728;AVG\SUM&#x7B49;&#x76F8;&#x5173;&#x8BA1;&#x7B97;&#x51FD;&#x6570;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x7531;&#x4E8E;dble&#x7684;&#x6570;&#x636E;&#x6765;&#x6E90;&#x4E8E;MySQL&#x7684;&#x67E5;&#x8BE2;&#x8FD4;&#x56DE;&#xFF0C;<br>&#x5F53;MySQL&#x9ED8;&#x8BA4;&#x8FD4;&#x56DE;&#x7684;&#x6570;&#x636E;&#x7CBE;&#x5EA6;&#x4E0D;&#x591F;&#x65F6;&#xFF0C;&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x6700;&#x7EC8;&#x67E5;&#x8BE2;&#x7684;&#x7ED3;&#x679C;&#x548C;MySQL&#x7684;&#x8BA1;&#x7B97;&#x7ED3;&#x679C;&#x6709;&#x5C11;&#x8BB8;&#x5DEE;&#x5F02;&#x7684;&#x60C5;&#x51B5;,&#x89C1;<br><a href="https://github.com/actiontech/dble/issues/843" target="_blank">for data type float, dble and mysql may get different results</a></p>
 <h3 id="3109-full-text-search-functions">3.10.9 Full-Text Search Functions</h3>
 <p>not supported  </p>
 <h3 id="31010-xml-functions">3.10.10 XML Functions</h3>
@@ -3417,7 +3431,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"3.10 函数与操作符支持列表(alpha版本)","level":"1.5.10","depth":2,"next":{"title":"4.协议兼容","level":"1.6","depth":1,"path":"4.Protocol/4.0_overview.md","ref":"4.Protocol/4.0_overview.md","articles":[{"title":"4.1 基本包","level":"1.6.1","depth":2,"path":"4.Protocol/4.1_Packet.md","ref":"4.Protocol/4.1_Packet.md","articles":[]},{"title":"4.2 连接建立","level":"1.6.2","depth":2,"path":"4.Protocol/4.2_Connecting.md","ref":"4.Protocol/4.2_Connecting.md","articles":[]},{"title":"4.3 文本协议","level":"1.6.3","depth":2,"path":"4.Protocol/4.3_Text_Protocol.md","ref":"4.Protocol/4.3_Text_Protocol.md","articles":[]},{"title":"4.4 二进制协议 (Prepared Statements)","level":"1.6.4","depth":2,"path":"4.Protocol/4.4_Binary_Protocol.md","ref":"4.Protocol/4.4_Binary_Protocol.md","articles":[]},{"title":"4.5 服务响应包","level":"1.6.5","depth":2,"path":"4.Protocol/4.5_Server_Response_Packets.md","ref":"4.Protocol/4.5_Server_Response_Packets.md","articles":[]}]},"previous":{"title":"3.9 其他不支持语句","level":"1.5.9","depth":2,"path":"3.SQL_Syntax/3.9_Other_unsupport.md","ref":"3.SQL_Syntax/3.9_Other_unsupport.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"3.SQL_Syntax/3.10_func_and_operators.md","mtime":"2018-11-13T07:37:46.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-12-10T05:46:23.439Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"3.10 函数与操作符支持列表(alpha版本)","level":"1.5.10","depth":2,"next":{"title":"4.协议兼容","level":"1.6","depth":1,"path":"4.Protocol/4.0_overview.md","ref":"4.Protocol/4.0_overview.md","articles":[{"title":"4.1 基本包","level":"1.6.1","depth":2,"path":"4.Protocol/4.1_Packet.md","ref":"4.Protocol/4.1_Packet.md","articles":[]},{"title":"4.2 连接建立","level":"1.6.2","depth":2,"path":"4.Protocol/4.2_Connecting.md","ref":"4.Protocol/4.2_Connecting.md","articles":[]},{"title":"4.3 文本协议","level":"1.6.3","depth":2,"path":"4.Protocol/4.3_Text_Protocol.md","ref":"4.Protocol/4.3_Text_Protocol.md","articles":[]},{"title":"4.4 二进制协议 (Prepared Statements)","level":"1.6.4","depth":2,"path":"4.Protocol/4.4_Binary_Protocol.md","ref":"4.Protocol/4.4_Binary_Protocol.md","articles":[]},{"title":"4.5 服务响应包","level":"1.6.5","depth":2,"path":"4.Protocol/4.5_Server_Response_Packets.md","ref":"4.Protocol/4.5_Server_Response_Packets.md","articles":[]}]},"previous":{"title":"3.9 其他不支持语句","level":"1.5.9","depth":2,"path":"3.SQL_Syntax/3.9_Other_unsupport.md","ref":"3.SQL_Syntax/3.9_Other_unsupport.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"3.SQL_Syntax/3.10_func_and_operators.md","mtime":"2019-01-07T08:52:31.038Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-07T08:53:00.754Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
