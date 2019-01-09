@@ -2068,12 +2068,14 @@
 <h3 id="022-&#x5B9E;&#x73B0;&#x6539;&#x8FDB;">0.2.2 &#x5B9E;&#x73B0;&#x6539;&#x8FDB;</h3>
 <ul>
 <li>&#x5BF9;&#x67D0;&#x4E9B;&#x6807;&#x51C6;SQL&#x8BED;&#x6CD5;&#x652F;&#x6301;&#x4E0D;&#x591F;&#x597D;&#x7684;&#x65B9;&#x9762;&#x4F5C;&#x4E86;&#x6539;&#x8FDB;&#xFF0C;&#x4F8B;&#x5982;&#x5BF9;create table if not exists...&#x3001;alter table add/drop [primary] key...&#x7B49;&#x8BED;&#x6CD5;&#x7684;&#x652F;&#x6301;</li>
+<li>&#x5BF9;&#x6574;&#x4F53;&#x5185;&#x90E8;IO&#x7ED3;&#x6784;&#x8FDB;&#x884C;&#x4E86;&#x5927;&#x5E45;&#x7684;&#x6539;&#x9020;&#x548C;&#x8C03;&#x4F18;:&#x53C2;&#x89C1;<a href="pic/dble_IO_cn.png">dble&#x7684;IO&#x7ED3;&#x6784;</a> &#x6216;&#x8005;&#x89C1;&#x672C;&#x8282;&#x7ED3;&#x5C3E;&#x9644;&#x5F55;2</li>
 <li>&#x7981;&#x6B62;&#x666E;&#x901A;&#x7528;&#x6237;&#x8FDE;&#x63A5;&#x7BA1;&#x7406;&#x7AEF;&#x53E3;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x64CD;&#x4F5C;&#xFF0C;&#x589E;&#x5F3A;&#x5B89;&#x5168;&#x6027; <a href="https://github.com/actiontech/dble/issues/56" target="_blank">#56</a></li>
 <li><p>&#x5BF9;&#x5168;&#x5C40;&#x5E8F;&#x5217;&#x505A;&#x4E86;&#x5982;&#x4E0B;&#x6539;&#x8FDB;</p>
 <ul>
 <li>&#x5220;&#x53BB;&#x65E0;&#x5DE5;&#x7A0B;&#x610F;&#x4E49;&#x7684;&#x672C;&#x5730;&#x6587;&#x4EF6;&#x65B9;&#x5F0F;</li>
 <li>&#x6539;&#x8FDB;&#x6570;&#x636E;&#x5E93;&#x65B9;&#x5F0F;&#x3001;ZK&#x65B9;&#x5F0F;&#xFF0C;&#x4F7F;&#x83B7;&#x53D6;&#x7684;&#x5E8F;&#x5217;&#x53F7;&#x66F4;&#x52A0;&#x51C6;&#x786E;</li>
 <li>&#x6539;&#x8FDB;&#x65F6;&#x95F4;&#x6233;&#x65B9;&#x5F0F;&#x548C;ZK ID&#x751F;&#x6210;&#x5668;&#x65B9;&#x5F0F;&#xFF0C;&#x6D88;&#x9664;&#x5E76;&#x53D1;&#x4F4E;&#x65F6;&#x7684;&#x6570;&#x636E;&#x5206;&#x5E03;&#x503E;&#x659C;&#x95EE;&#x9898;</li>
+<li>&#x4FEE;&#x590D;&#x4E86;&#x6570;&#x636E;&#x5E93;&#x65B9;&#x5F0F;&#x5168;&#x5C40;&#x5E8F;&#x5217;&#x4E2D;&#x7EBF;&#x7A0B;&#x5B89;&#x5168;&#x7684;&#x95EE;&#x9898;<a href="https://github.com/actiontech/dble/issues/489" target="_blank">#489</a></li>
 <li>&#x79FB;&#x9664;&#x81EA;&#x5B9A;&#x4E49;&#x8BED;&#x6CD5;   &#x9650;&#x5236;&#xFF1A;&#x5168;&#x5C40;&#x5E8F;&#x5217;&#x503C;&#x4E0D;&#x80FD;&#x663E;&#x5F0F;&#x6307;&#x5B9A;  <ul>
 <li>&#x539F;&#x6765;&#xFF1A;insert into table1(id,name) values(next value for MYCATSEQ_GLOBAL,&#x2018;test&#x2019;);</li>
 <li>&#x73B0;&#x5728;1&#xFF1A;insert into table1(name) values(&#x2018;test&#x2019;);</li>
@@ -2088,6 +2090,8 @@
 <li>&#x7CFB;&#x7EDF;&#x901A;&#x8FC7;&#x667A;&#x80FD;&#x5224;&#x65AD;&#xFF0C;&#x5BF9;&#x4E8E;&#x4E00;&#x4E9B;&#x6CA1;&#x6709;&#x663E;&#x5F0F;&#x914D;&#x7F6E;&#x4F46;&#x5B9E;&#x9645;&#x7B26;&#x5408;ER&#x6761;&#x4EF6;&#x7684;&#x8868;&#x89C6;&#x4F5C;ER&#x8868;&#x540C;&#x6837;&#x5904;&#x7406;</li>
 <li>&#x5728;&#x4E2D;&#x95F4;&#x4EF6;&#x5185;&#x8FDB;&#x884C;&#x667A;&#x80FD;&#x89E3;&#x6790;&#x4E0E;&#x5224;&#x65AD;&#xFF0C;&#x4F7F;&#x7528;&#x6B63;&#x786E;&#x7684;schema&#xFF0C;&#x66FF;&#x6362;&#x6709;&#x7F3A;&#x9677;&#x7684;checkSQLschema &#x53C2;&#x6570; </li>
 <li>conf/index_to_charset.properties&#x7684;&#x5185;&#x5BB9;&#x56FA;&#x5316;&#x5230;&#x4EE3;&#x7801; &#x3002;</li>
+<li>&#x5BF9;&#x4E8E;&#x524D;&#x7AEF;&#x6309;&#x7167;&#x7528;&#x6237;&#x9650;&#x5236;&#x8FDE;&#x63A5;&#x6570;&#xFF0C;&#x9650;&#x5236;&#x603B;&#x8FDE;&#x63A5;&#x6570;</li>
+<li>&#x6539;&#x8FDB;&#x539F;&#x672C;&#x7684;SQL&#x7EDF;&#x8BA1;&#xFF0C;&#x589E;&#x52A0;UPDATE/DELETE/INSERT</li>
 </ul>
 <h3 id="023-&#x529F;&#x80FD;&#x589E;&#x5F3A;">0.2.3 &#x529F;&#x80FD;&#x589E;&#x5F3A;</h3>
 <ul>
@@ -2123,6 +2127,28 @@
 <li>&#x5206;&#x5E03;&#x5F0F;&#x4E8B;&#x52A1;:XA&#x5B9E;&#x73B0;&#x65B9;&#x5F0F;&#x7684;&#x5F02;&#x5E38;&#x5904;&#x7406;&#x7684;&#x6539;&#x8FDB;</li>
 <li>&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#x652F;&#x6301;</li>
 <li>&#x652F;&#x6301;DUAL</li>
+<li>&#x652F;&#x6301;&#x5355;&#x6B21;&#x8BF7;&#x6C42;&#x591A;&#x8BED;&#x53E5;(&#x90E8;&#x5206;&#x5BA2;&#x6237;&#x7AEF;&#x6709;&#x4F7F;&#x7528;C&#xFF0C;C++&#x5E38;&#x89C1;)</li>
+<li>&#x4E0D;&#x65AD;&#x4E30;&#x5BCC;&#x7684;&#x8DEF;&#x7531;&#x89C4;&#x5219;&#x4F18;&#x5316;&#x548C;&#x6761;&#x4EF6;&#x4F18;&#x5316;</li>
+<li>&#x5347;&#x7EA7;Druid,&#x8DDF;&#x8FDB;&#x6700;&#x65B0;&#x7684;&#x89E3;&#x6790;&#x5668;</li>
+<li>&#x5347;&#x7EA7;fastjson,&#x907F;&#x514D;&#x5B89;&#x5168;&#x95EE;&#x9898;</li>
+<li>&#x667A;&#x80FD;&#x5224;&#x65AD;reload&#x8FDE;&#x63A5;&#x53D8;&#x66F4;&#xFF0C;&#x70ED;&#x66F4;&#x65B0;&#x8FDE;&#x63A5;&#x6C60;</li>
+<li>&#x5BF9;MySQL&#x534F;&#x8BAE;&#x53CA;GUI&#x5DE5;&#x5177;/Driver&#x66F4;&#x53CB;&#x597D;&#x7684;&#x652F;&#x6301;</li>
+<li>&#x589E;&#x52A0;&#x66F4;&#x591A;&#x7684;&#x7BA1;&#x7406;&#x7AEF;&#x547D;&#x4EE4;,&#x6EE1;&#x8DB3;&#x66F4;&#x591A;&#x8FD0;&#x7EF4;&#x9700;&#x8981;</li>
+<li>&#x7F13;&#x5B58;&#x652F;&#x6301;&#x4F7F;&#x7528;RocksDB </li>
+<li>&#x589E;&#x52A0;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x529F;&#x80FD;&#xFF0C;&#x517C;&#x5BB9;mysqldumpslow &#x548C; pt-query-digest</li>
+<li>Trace&#x529F;&#x80FD;&#xFF0C;&#x7528;&#x4E8E;&#x5206;&#x6790;&#x5355;&#x6761;&#x67E5;&#x8BE2;&#x7684;&#x6027;&#x80FD;&#x74F6;&#x9888;</li>
+<li>&#x5927;&#x5C0F;&#x5199;&#x654F;&#x611F;&#x4F9D;&#x8D56;&#x4E8E;&#x540E;&#x7AEF;MySQL</li>
+<li>&#x652F;&#x6301;Prepared SQL Statement Syntax</li>
+<li>&#x652F;&#x6301;&#x4EE5;&#x4E0B;&#x5B50;&#x67E5;&#x8BE2;<ul>
+<li>The Subquery as Scalar Operand</li>
+<li>Comparisons Using Subqueries</li>
+<li>Subqueries with ANY, IN, or SOME</li>
+<li>Subqueries with ALL</li>
+<li>Subqueries with EXISTS or NOT EXISTS</li>
+<li>Derived Tables (Subqueries in the FROM Clause)</li>
+</ul>
+</li>
+<li>&#x652F;&#x6301;dble&#x5C42;&#x9762;&#x7684; View</li>
 </ul>
 <h3 id="024-&#x529F;&#x80FD;&#x88C1;&#x51CF;">0.2.4 &#x529F;&#x80FD;&#x88C1;&#x51CF;</h3>
 <ul>
@@ -2135,6 +2161,8 @@
 </ul>
 <h3 id="025-&#x9644;&#x5F55;">0.2.5 &#x9644;&#x5F55;</h3>
 <p>&#x4E00;&#x4E9B;&#x529F;&#x80FD;&#x6539;&#x8FDB;&#x7684;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#xFF0C;&#x89C1;<a href="doc/DBLE_enhance_for_MyCAT.pdf">&#x5F00;&#x6E90;&#x6570;&#x636E;&#x5E93;&#x4E2D;&#x95F4;&#x4EF6;DBLE&#x5BF9;MyCAT&#x7684;&#x589E;&#x5F3A;&#x4E0E;&#x6539;&#x8FDB;</a></p>
+<h3 id="026-&#x9644;&#x5F55;2">0.2.6 &#x9644;&#x5F55;2</h3>
+<p><img src="pic/dble_IO_cn.png" alt="dble&#x7684;IO&#x7ED3;&#x6784;"></p>
 
                                 
                                 </section>
@@ -2178,7 +2206,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"0.2 dble对MyCat做的增强","level":"1.2.2","depth":2,"next":{"title":"0.3 快速开始","level":"1.2.3","depth":2,"path":"0.overview/0.3_dble_quick_start.md","ref":"0.overview/0.3_dble_quick_start.md","articles":[]},"previous":{"title":"0.1 dble 简介与整体架构","level":"1.2.1","depth":2,"path":"0.overview/0.1_dble_overview.md","ref":"0.overview/0.1_dble_overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"0.overview/0.2_dble_enhance_MyCat.md","mtime":"2018-11-13T07:37:46.051Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-08T03:15:29.942Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"0.2 dble对MyCat做的增强","level":"1.2.2","depth":2,"next":{"title":"0.3 快速开始","level":"1.2.3","depth":2,"path":"0.overview/0.3_dble_quick_start.md","ref":"0.overview/0.3_dble_quick_start.md","articles":[]},"previous":{"title":"0.1 dble 简介与整体架构","level":"1.2.1","depth":2,"path":"0.overview/0.1_dble_overview.md","ref":"0.overview/0.1_dble_overview.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"0.overview/0.2_dble_enhance_MyCat.md","mtime":"2019-01-09T06:59:12.815Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T06:59:16.954Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
