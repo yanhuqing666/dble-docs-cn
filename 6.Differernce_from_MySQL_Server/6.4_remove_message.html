@@ -151,12 +151,25 @@
             
         </li>
     
-        <li class="chapter " data-level="1.2.4" data-path="../0.overview/0.4_sharding_brief_introduction.html">
+        <li class="chapter " data-level="1.2.4" data-path="../0.overview/0.4_dble_quick_start_docker.html">
             
-                <a href="../0.overview/0.4_sharding_brief_introduction.html">
+                <a href="../0.overview/0.4_dble_quick_start_docker.html">
             
                     
-                    0.4 数据拆分简介
+                    0.4 docker镜像快速开始
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../0.overview/0.5_sharding_brief_introduction.md">
+            
+                <span>
+            
+                    
+                    0.5 数据拆分简介
             
                 </a>
             
@@ -1180,6 +1193,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.4.22" data-path="../2.Function/2.22_kill_ddl_lock.html">
+            
+                <a href="../2.Function/2.22_kill_ddl_lock.html">
+            
+                    
+                    2.22 KILL @@DDL_LOCK
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -1792,7 +1818,7 @@
                 <a href="6.2_insert_sequence.html">
             
                     
-                    6.2 INSERT不能显示自增序列
+                    6.2 INSERT不能显式指定自增序列
             
                 </a>
             
@@ -2053,13 +2079,13 @@
                                 <h2 id="64-&#x53BB;&#x9664;&#x4E86;&#x589E;&#x5220;&#x6539;&#x7684;message-&#x4FE1;&#x606F;">6.4 &#x53BB;&#x9664;&#x4E86;&#x589E;&#x5220;&#x6539;&#x7684;message &#x4FE1;&#x606F;</h2>
 <p>&#x5177;&#x4F53;&#x8868;&#x73B0;&#x5982;&#x4E0B;:</p>
 <p>MySQL&#x884C;&#x4E3A;: </p>
-<p>mysql&gt; insert into sharding_two_node values(9,&apos;9&apos;,9.0),(10,&apos;10&apos;,10.0);
+<pre><code>mysql&gt; insert into sharding_two_node values(9,&apos;9&apos;,9.0),(10,&apos;10&apos;,10.0);
 Query OK, 2 rows affected (0.24 sec)
-Records: 2  Duplicates: 0  Warnings: 0</p>
-<p>dble&#x884C;&#x4E3A;:</p>
-<p>mysql&gt; insert into sharding_two_node values(11,&apos;11&apos;,11.0),(12,&apos;12&apos;,12.0);
-Query OK, 2 rows affected (0.49 sec)</p>
-
+Records: 2  Duplicates: 0  Warnings: 0
+</code></pre><p>dble&#x884C;&#x4E3A;:</p>
+<pre><code>mysql&gt; insert into sharding_two_node values(11,&apos;11&apos;,11.0),(12,&apos;12&apos;,12.0);
+Query OK, 2 rows affected (0.49 sec)
+</code></pre>
                                 
                                 </section>
                             
@@ -2102,7 +2128,7 @@ Query OK, 2 rows affected (0.49 sec)</p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"6.4 去除了增删改的message信息","level":"1.8.4","depth":2,"next":{"title":"6.5 information_schema等库的支持","level":"1.8.5","depth":2,"path":"6.Differernce_from_MySQL_Server/6.5_about_information_schema.md","ref":"6.Differernce_from_MySQL_Server/6.5_about_information_schema.md","articles":[]},"previous":{"title":"6.3 增加\"show all tables\"","level":"1.8.3","depth":2,"path":"6.Differernce_from_MySQL_Server/6.3_add_show_all_tables.md","ref":"6.Differernce_from_MySQL_Server/6.3_add_show_all_tables.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"6.Differernce_from_MySQL_Server/6.4_remove_message.md","mtime":"2018-11-13T07:37:46.079Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-09T06:59:16.954Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"6.4 去除了增删改的message信息","level":"1.8.4","depth":2,"next":{"title":"6.5 information_schema等库的支持","level":"1.8.5","depth":2,"path":"6.Differernce_from_MySQL_Server/6.5_about_information_schema.md","ref":"6.Differernce_from_MySQL_Server/6.5_about_information_schema.md","articles":[]},"previous":{"title":"6.3 增加\"show all tables\"","level":"1.8.3","depth":2,"path":"6.Differernce_from_MySQL_Server/6.3_add_show_all_tables.md","ref":"6.Differernce_from_MySQL_Server/6.3_add_show_all_tables.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"6.Differernce_from_MySQL_Server/6.4_remove_message.md","mtime":"2019-03-01T06:15:44.858Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-03-01T06:16:20.001Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
