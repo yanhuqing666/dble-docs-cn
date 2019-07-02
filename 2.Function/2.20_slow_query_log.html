@@ -429,6 +429,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.11" data-path="../1.config_file/1.11_customized_alert.html">
+            
+                <a href="../1.config_file/1.11_customized_alert.html">
+            
+                    
+                    1.11 自定义告警
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2105,7 +2118,7 @@
                                 <h2 id="220-&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;">2.20 &#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;</h2>
 <p>&#x7C7B;&#x4F3C;&#x4E8E;MySQL&#x7684;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#xFF0C;&#x53EF;&#x4EE5;&#x5168;&#x5C40;&#x5F00;&#x542F;&#x5E76;&#x8BBE;&#x7F6E;&#xFF0C;&#x8BB0;&#x5F55;dble server&#x8FD0;&#x884C;&#x8FC7;&#x7A0B;&#x5F53;&#x4E2D;&#x7684;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#xFF0C;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x517C;&#x5BB9;MySQL&#x6162;&#x67E5;&#x8BE2;&#x5206;&#x6790;&#x5DE5;&#x5177;(&#x5DF2;&#x6D4B;&#x8BD5;&#x8FC7;MySQL&#x5B98;&#x65B9;&#x5DE5;&#x5177;mysqldumpslow&#x548C;Percona&#x7684;pt-query-digest)  </p>
 <h3 id="2201-&#x5728;serverxml&#x91CC;&#x589E;&#x52A0;&#x4E86;6&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x542F;&#x52A8;&#x65F6;&#x5019;&#x63A7;&#x5236;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x7684;&#x884C;&#x4E3A;">2.20.1 &#x5728;server.xml&#x91CC;&#x589E;&#x52A0;&#x4E86;6&#x4E2A;&#x53C2;&#x6570;&#xFF0C;&#x7528;&#x4E8E;&#x542F;&#x52A8;&#x65F6;&#x5019;&#x63A7;&#x5236;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x7684;&#x884C;&#x4E3A;</h3>
-<pre><code> &lt;!-- &#x662F;&#x5426;&#x5F00;&#x542F;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7; --&gt;
+<pre><code>&lt;!-- &#x662F;&#x5426;&#x5F00;&#x542F;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7; --&gt;
 &lt;property name=&quot;enableSlowLog&quot;&gt;0&lt;/property&gt;
 &lt;!-- &#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x4FDD;&#x5B58;&#x6587;&#x4EF6;&#x76EE;&#x5F55; --&gt;
 &lt;!--&lt;property name=&quot;slowLogBaseDir&quot;&gt;./slowlogs&lt;/property&gt;--&gt;
@@ -2121,7 +2134,7 @@
 <pre><code>enable @@slow_query_log; -- &#x5F00;&#x542F;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;  
 show @@slow_query_log; -- &#x67E5;&#x8BE2;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x7684;&#x5F00;&#x542F;&#x72B6;&#x6001;  
 disable @@slow_query_log; -- &#x5173;&#x95ED;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;  
-show @@slow_query_log;
+show @@slow_query_log; -- &#x518D;&#x6B21;&#x67E5;&#x8BE2;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x7684;&#x5F00;&#x542F;&#x72B6;&#x6001;  
 
 show @@slow_query.time;  -- &#x67E5;&#x770B;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x7EDF;&#x8BA1;&#x9608;&#x503C;  
 reload @@slow_query.time=200;  -- &#x4FEE;&#x6539;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x7EDF;&#x8BA1;&#x9608;&#x503C;  
@@ -2834,7 +2847,9 @@ select count(*) from sharding_two_node where id =(select id from sharding_two_no
 #    SHOW CREATE TABLE `sharding_two_node`\G
 # EXPLAIN /*!50100 PARTITIONS*/
 select * from sharding_two_node where id =1\G
-</code></pre><h3 id="2204-&#x9644;&#xFF1A;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x89E3;&#x6790;">2.20.4 &#x9644;&#xFF1A;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x89E3;&#x6790;</h3>
+</code></pre><h4 id="22033-&#x9650;&#x5236;">2.20.3.3 &#x9650;&#x5236;</h4>
+<p>&#x5F53;mysqldumpslow&#x7248;&#x672C;&#x4E3A;5.6&#x6216;&#x66F4;&#x65E9;&#x7684;&#x7248;&#x672C;&#x65F6;&#xFF0C;&#x5728;&#x89E3;&#x6790;&#x6162;&#x65E5;&#x5FD7;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x7531;&#x4E8E;mysqldumpslow&#x53EA;&#x80FD;&#x8BC6;&#x522B;&apos;190428 10:28:16&apos;&#x683C;&#x5F0F;&#x7684;Time&#x5B57;&#x6BB5;&#xFF0C;&#x800C;dble&#x5374;&#x4F7F;&#x7528;&#x4E86;&apos;2019-04-28T10:28:16.515000Z&apos;&#x5B57;&#x6BB5;&#x683C;&#x5F0F;&#xFF0C;&#x56E0;&#x6B64;&#x89E3;&#x6790;&#x751F;&#x6210;&#x7684;&#x6162;&#x65E5;&#x5FD7;&#x4F1A;&#x51FA;&#x9519;&#x3002;&#x8BE6;&#x60C5;&#x53C2;&#x89C1;issue:<a href="https://github.com/actiontech/dble/issues/908" target="_blank">https://github.com/actiontech/dble/issues/908</a></p>
+<h3 id="2204-&#x9644;&#xFF1A;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x89E3;&#x6790;">2.20.4 &#x9644;&#xFF1A;&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;&#x89E3;&#x6790;</h3>
 <h4 id="22041-mysql-&#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;">2.20.4.1 MySQL &#x6162;&#x67E5;&#x8BE2;&#x65E5;&#x5FD7;&#x683C;&#x5F0F;</h4>
 <p>&#x5148;&#x653E;&#x4E00;&#x6BB5;&#x6B63;&#x5E38;&#x8BB0;&#x5F55;&#x7684;MySQL&#x6162;&#x65E5;&#x5FD7;  </p>
 <pre><code>
@@ -3013,7 +3028,7 @@ Time                 Id Command    Argument
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"2.20 慢查询日志","level":"1.4.20","depth":2,"next":{"title":"2.21 单条SQL性能trace","level":"1.4.21","depth":2,"path":"2.Function/2.21_query_trace.md","ref":"2.Function/2.21_query_trace.md","articles":[]},"previous":{"title":"2.19 智能计算reload","level":"1.4.19","depth":2,"path":"2.Function/2.19_reload_diff.md","ref":"2.Function/2.19_reload_diff.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"2.Function/2.20_slow_query_log.md","mtime":"2018-11-13T07:37:46.067Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-22T07:11:40.092Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"2.20 慢查询日志","level":"1.4.20","depth":2,"next":{"title":"2.21 单条SQL性能trace","level":"1.4.21","depth":2,"path":"2.Function/2.21_query_trace.md","ref":"2.Function/2.21_query_trace.md","articles":[]},"previous":{"title":"2.19 智能计算reload","level":"1.4.19","depth":2,"path":"2.Function/2.19_reload_diff.md","ref":"2.Function/2.19_reload_diff.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"2.Function/2.20_slow_query_log.md","mtime":"2019-07-02T05:20:54.419Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-02T05:21:57.459Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>

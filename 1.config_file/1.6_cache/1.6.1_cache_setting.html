@@ -429,6 +429,19 @@
             
         </li>
     
+        <li class="chapter " data-level="1.3.11" data-path="../1.11_customized_alert.html">
+            
+                <a href="../1.11_customized_alert.html">
+            
+                    
+                    1.11 自定义告警
+            
+                </a>
+            
+
+            
+        </li>
+    
 
             </ul>
             
@@ -2106,9 +2119,9 @@
 <h4 id="1611-dble&#x7684;cache&#x4F7F;&#x7528;">1.6.1.1 dble&#x7684;cache&#x4F7F;&#x7528;</h4>
 <p> dble&#x7684;cache&#x4F7F;&#x7528;&#x6709;&#x5982;&#x4E0B;&#x4E09;&#x7C7B;&#xFF1A;</p>
 <ul>
-<li>SQLRouteCache&#xFF1A;&#x7F13;&#x5B58;sql&#x8BED;&#x53E5;&#x5230;&#x6570;&#x636E;&#x6240;&#x5728;&#x8282;&#x70B9;&#x96C6;&#x7684;&#x6620;&#x5C04;&#x3002;</li>
-<li>ER_SQL2PARENTID&#xFF1A;&#x7F13;&#x5B58;&#x5B50;&#x8868;&#x5206;&#x533A;&#x53D1;&#x73B0;sql&#x8BED;&#x53E5;&#x5230;&#x6570;&#x636E;&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x6620;&#x5C04;&#x3002;</li>
-<li>TableID2DataNodeCache&#xFF1A;&#x7F13;&#x5B58;&#x5206;&#x533A;&#x952E;&#x503C;&#x5230;&#x6570;&#x636E;&#x6240;&#x5728;&#x8282;&#x70B9;&#x7684;&#x6620;&#x5C04;&#x3002;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x5C42;&#x6B21;cache&#x3002;</li>
+<li>SQLRouteCache&#xFF1A;&#x4ECE;&#x524D;&#x7AEF;&#x8FDE;&#x63A5;&#x6536;&#x5230;&#x7684;SQL&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x7ED3;&#x679C; &#x5185;&#x5BB9;&#xFF1A; shema_user_SQL -&gt; &#x5177;&#x4F53;&#x8DEF;&#x7531;&#x7ED3;&#x679C;RouteResult</li>
+<li>ER_SQL2PARENTID&#xFF1A;&#x7236;&#x5B50;&#x8868;&#x8F85;&#x52A9;&#x67E5;&#x8BE2;SQL&#x4EE5;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x8DEF;&#x7531;&#x7ED3;&#x679C;&#x3002;&#x5728;&#x63D2;&#x5165;ER&#x5B50;&#x8868;&#x7684;&#x65F6;&#x5019;&#x9700;&#x8981;&#x6839;&#x636E;&#x5B50;&#x8868;joinKey(&#x7236;&#x8868;parentKey)&#x8BA1;&#x7B97;&#x5B83;&#x5E94;&#x8BE5;&#x63D2;&#x5165;&#x7684;&#x7ED3;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x8F85;&#x52A9;&#x8DEF;&#x7531;&#x6765;&#x67E5;&#x8BE2;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x8F85;&#x52A9;&#x8DEF;&#x7531;&#x53CA;&#x5BF9;&#x5E94;&#x7684;&#x7ED3;&#x679C;&#x7F13;&#x5B58;&#x4E0B;&#x6765;&#x4EE5;&#x5907;&#x4E0B;&#x6B21;&#x67E5;&#x8BE2;&#x3002;&#x5185;&#x5BB9;&#x4E3A;&#xFF1A;schema:select * from &#x7236;&#x8868; where parentKey = (value of joinKey) -&gt; &#x5BF9;&#x5E94;&#x6570;&#x636E;dataNode</li>
+<li>TableID2DataNodeCache&#xFF1A;&#x8868;&#x683C;&#x4E3B;&#x952E;(schema.xml&#x4E2D;&#x58F0;&#x660E;&#x7684;&#x4E3B;&#x952E;)&#x548C;&#x5BF9;&#x5E94;&#x6570;&#x636E;&#x8282;&#x70B9;  &#x5185;&#x5BB9; tableName -&gt; primaryKeyValue -&gt; &#x5BF9;&#x5E94;&#x6570;&#x636E;dataNode</li>
 </ul>
 <h4 id="1612-dble&#x7684;cache&#x5B9E;&#x73B0;">1.6.1.2 dble&#x7684;cache&#x5B9E;&#x73B0;</h4>
 <p>dble&#x7684;cache&#x5B9E;&#x73B0;&#x6709;&#x5982;&#x4E0B;&#x51E0;&#x79CD;&#xFF1A;</p>
@@ -2206,7 +2219,7 @@ layedpool.TableID2DataNodeCacheType=<strong>type</strong>  </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"1.6.1 cache配置","level":"1.3.6.1","depth":3,"next":{"title":"1.6.2 ehcache配置","level":"1.3.6.2","depth":3,"path":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","ref":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","articles":[]},"previous":{"title":"1.6 cache配置","level":"1.3.6","depth":2,"path":"1.config_file/1.06_cache.md","ref":"1.config_file/1.06_cache.md","articles":[{"title":"1.6.1 cache配置","level":"1.3.6.1","depth":3,"path":"1.config_file/1.6_cache/1.6.1_cache_setting.md","ref":"1.config_file/1.6_cache/1.6.1_cache_setting.md","articles":[]},{"title":"1.6.2 ehcache配置","level":"1.3.6.2","depth":3,"path":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","ref":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"1.config_file/1.6_cache/1.6.1_cache_setting.md","mtime":"2019-03-01T08:12:33.044Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-04-22T07:11:40.092Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"1.6.1 cache配置","level":"1.3.6.1","depth":3,"next":{"title":"1.6.2 ehcache配置","level":"1.3.6.2","depth":3,"path":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","ref":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","articles":[]},"previous":{"title":"1.6 cache配置","level":"1.3.6","depth":2,"path":"1.config_file/1.06_cache.md","ref":"1.config_file/1.06_cache.md","articles":[{"title":"1.6.1 cache配置","level":"1.3.6.1","depth":3,"path":"1.config_file/1.6_cache/1.6.1_cache_setting.md","ref":"1.config_file/1.6_cache/1.6.1_cache_setting.md","articles":[]},{"title":"1.6.2 ehcache配置","level":"1.3.6.2","depth":3,"path":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","ref":"1.config_file/1.6_cache/1.6.2_ehcache_setting.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters"],"styles":{"website":"website.css"},"pluginsConfig":{"fontsettings":{"theme":"sepia","family":"sans","size":2},"expandable-chapters":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"ActionTech","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a2","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"dble manual","gitbook":"*"},"file":{"path":"1.config_file/1.6_cache/1.6.1_cache_setting.md","mtime":"2019-07-02T05:20:54.411Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-07-02T05:21:57.459Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>
